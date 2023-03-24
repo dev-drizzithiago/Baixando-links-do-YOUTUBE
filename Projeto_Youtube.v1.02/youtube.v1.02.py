@@ -38,7 +38,7 @@ def menu_principal(msg_menu):
 class botao_radio:
     def __init__(self):
         self.janela_radio = tk.Tk()
-        self.label_1 = tk.Label(self.janela_radio, text='>>> Downloads Videos YOUTUBE <<<')
+        self.label_1 = tk.Label(self.janela_radio, text='>>> Downloads Videos YOUTUBE <<<', pady=20, padx=30)
         self.label_1.pack(anchor='center')
         self.frame_1 = tk.Frame(self.janela_radio, height=5, width=40)
         self.frame_1.pack(anchor='center')
@@ -58,10 +58,10 @@ class botao_radio:
                                        variable=self.radio_valor, value=3)
         self.listagem.pack(anchor='w')
         # Botoes
-        self.botao = tk.Button(self.frame_2, text='Selecionar', height=2, width=10, relief='groove', underline=-1,
+        self.botao = tk.Button(self.frame_2, text='Selecionar', height=2, width=10, relief='groove', justify='center',
                                command=self.opcao)
         self.botao.pack(side='left')
-        self.botao.sair = tk.Button(self.frame_2, text='Sair', height=1, width=5, relief='groove', 
+        self.botao.sair = tk.Button(self.frame_2, text='Sair', height=1, width=5, relief='groove', justify='center',
                                     command=self.janela_radio.destroy)
         self.botao.sair.pack(side='right')
         tk.mainloop()
