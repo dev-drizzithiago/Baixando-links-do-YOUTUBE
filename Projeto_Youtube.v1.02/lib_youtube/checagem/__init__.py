@@ -16,7 +16,7 @@ def criando_pasta():
         vrf_arquivo()  # Função
         vrf_audios()  # Função
         vrf_videos()  # Função
-        log_arquivo_ok('Iniciando o Programa...')  # Se todas as pastas estiverem corretas, programa inicia
+        print('Iniciando o Programa...')  # Se todas as pastas estiverem corretas, programa inicia
 
 
 # Verificador de pasta, caso alguma pasta seja deletada, ela refaz.

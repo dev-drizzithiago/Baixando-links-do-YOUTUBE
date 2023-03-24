@@ -79,7 +79,7 @@ class botao_radio:
         elif opcao == 2:
             log_arquivo_ok('Realizando downloads...')
         elif opcao == 3:
-            log_arquivo_ok('\bListando arquivos...')
+            log_arquivo_ok('Listando arquivos...')
         menu_principal(opcao)
 
 

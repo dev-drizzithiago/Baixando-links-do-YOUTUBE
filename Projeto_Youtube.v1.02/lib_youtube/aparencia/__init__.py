@@ -77,14 +77,14 @@ def log():
 def log_arquivo_ok(msg_ok):
     msg = f' ==> {data} - {msg_ok}'
     open_log = open(log(), 'a')
-    open_log.write(f' Sem erro ==> {msg}\n\n')
-    messagebox.showinfo(f'AVISO!!', f'{msg_ok}')
+    open_log.write(f' Sem erro ==> {msg}\n')
+    print(f'AVISO!!', f'{msg_ok}')
 
 
 def log_arquivo_erro(msg_log):
     msg = f' ERRO ==> {data} - {msg_log}'
     open_log = open(log(), 'a')
-    open_log.write(f' Com erro ==> {msg}\n\n')
+    open_log.write(f' Com erro ==> {msg}\n')
     messagebox.showwarning(f'AVISO!', f'{msg}')
 
 
