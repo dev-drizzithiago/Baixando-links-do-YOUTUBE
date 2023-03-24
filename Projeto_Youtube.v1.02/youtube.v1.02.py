@@ -37,33 +37,33 @@ def menu_principal(msg_menu):
 # menu principal
 class botao_radio:
     def __init__(self):
-        self.janele_radio = tk.Tk()
-        self.label_1 = tk.Label(self.janele_radio, text='>>> Downloads Videos YOUTUBE <<<')
-        self.label_1.pack(side='top')
-        self.frame_1 = tk.Frame(self.janele_radio, height=5, width=40)
-        self.frame_1.pack(side='left')
-        self.frame_2 = tk.Frame(self.janele_radio, height=5, width=40)
-        self.frame_2.pack(side='left')
+        self.janela_radio = tk.Tk()
+        self.label_1 = tk.Label(self.janela_radio, text='>>> Downloads Videos YOUTUBE <<<')
+        self.label_1.pack(anchor='center')
+        self.frame_1 = tk.Frame(self.janela_radio, height=5, width=40)
+        self.frame_1.pack(anchor='center')
+        self.frame_2 = tk.Frame(self.janela_radio, height=5, width=40)
+        self.frame_2.pack(anchor='center')
 
         self.radio_valor = tk.IntVar()
         self.radio_valor.set(0)
         # Botão radio
-        self.add_link = tk.Radiobutton(self.frame_1, text='==> Adicionar Link ',
+        self.add_link = tk.Radiobutton(self.frame_1, text='==> Adicionar Link ', 
                                        variable=self.radio_valor, value=1)
         self.add_link.pack(anchor='w')
-        self.download = tk.Radiobutton(self.frame_1, text='==> Downloads ',
+        self.download = tk.Radiobutton(self.frame_1, text='==> Downloads ',  
                                        variable=self.radio_valor, value=2)
         self.download.pack(anchor='w')
         self.listagem = tk.Radiobutton(self.frame_1, text='==> Listagem',
                                        variable=self.radio_valor, value=3)
         self.listagem.pack(anchor='w')
         # Botoes
-        self.botao = tk.Button(self.frame_2, text='Selecionar', height=2, width=10,
+        self.botao = tk.Button(self.frame_2, text='Selecionar', height=2, width=10, relief='groove', underline=-1,
                                command=self.opcao)
-        self.botao.pack(side='top')
-        self.botao.sair = tk.Button(self.frame_2, text='Sair', height=2, width=10,
-                                    command=self.janele_radio.destroy)
-        self.botao.sair.pack()
+        self.botao.pack(side='left')
+        self.botao.sair = tk.Button(self.frame_2, text='Sair', height=1, width=5, relief='groove', 
+                                    command=self.janela_radio.destroy)
+        self.botao.sair.pack(side='right')
         tk.mainloop()
 
     def opcao(self):
