@@ -31,7 +31,7 @@ def menu_principal(msg_menu):
             listagem_pastas(pasta)
 
     elif opcao_menu_principal == 5:
-        janela_info('Muito obrigado!!! Finalizando o programa!!')
+        janela_info('Finalizando o programa!!')
 
 
 # menu principal

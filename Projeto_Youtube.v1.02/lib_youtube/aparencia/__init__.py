@@ -15,7 +15,6 @@ def janela_link(msg_arq_link):
     """
     Janela responsável por interagir melhor com o usuário.
     """
-
     class janelaLinks:
         def __init__(self):
             # Abrindo a janela
