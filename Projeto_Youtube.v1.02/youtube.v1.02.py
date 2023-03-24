@@ -38,11 +38,14 @@ def menu_principal(msg_menu):
 class botao_radio:
     def __init__(self):
         self.janela_radio = tk.Tk()
-        self.label_1 = tk.Label(self.janela_radio, text='>>> Downloads Videos YOUTUBE <<<', pady=20, padx=30)
+
+        self.label_1 = tk.Label(self.janela_radio, text='>>> Downloads Videos YOUTUBE <<<', pady=5, padx=30)
         self.label_1.pack(anchor='center')
+
         self.frame_1 = tk.Frame(self.janela_radio, height=5, width=40)
         self.frame_1.pack(anchor='center')
-        self.frame_2 = tk.Frame(self.janela_radio, height=5, width=40)
+
+        self.frame_2 = tk.Frame(self.janela_radio, height=5, width=40, padx=4, pady=10, border=10)
         self.frame_2.pack(anchor='center')
 
         self.radio_valor = tk.IntVar()
@@ -51,17 +54,20 @@ class botao_radio:
         self.add_link = tk.Radiobutton(self.frame_1, text='==> Adicionar Link ', 
                                        variable=self.radio_valor, value=1)
         self.add_link.pack(anchor='w')
+
         self.download = tk.Radiobutton(self.frame_1, text='==> Downloads ',  
                                        variable=self.radio_valor, value=2)
         self.download.pack(anchor='w')
-        self.listagem = tk.Radiobutton(self.frame_1, text='==> Listagem',
+
+        self.listagem = tk.Radiobutton(self.frame_1, text='==> Listagem', pady=1, 
                                        variable=self.radio_valor, value=3)
         self.listagem.pack(anchor='w')
+
         # Botoes
-        self.botao = tk.Button(self.frame_2, text='Selecionar', height=2, width=10, relief='groove', justify='center',
+        self.botao = tk.Button(self.frame_2, text='Selecionar', height=2, width=10, relief='groove', justify='center', pady=5, padx=5,
                                command=self.opcao)
         self.botao.pack(side='left')
-        self.botao.sair = tk.Button(self.frame_2, text='Sair', height=1, width=5, relief='groove', justify='center',
+        self.botao.sair = tk.Button(self.frame_2, text='Sair', height=1, width=5, relief='groove', justify='center', pady=5, padx=5,
                                     command=self.janela_radio.destroy)
         self.botao.sair.pack(side='right')
         tk.mainloop()

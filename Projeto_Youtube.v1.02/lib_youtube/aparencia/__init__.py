@@ -27,17 +27,24 @@ def janela_link(msg_arq_link):
             # Frame 1
             self.frame_1 = tk.Frame(self.janela_principal, height=50, width=700)
             self.frame_1.pack(fill=tk.X)
-            self.caixa_link = tk.Label(self.frame_1, text='Entre com o link: ')
-            self.caixa_link.pack(side='left')
+
+            self.frame_2 = tk.Frame(self.janela_principal)
+            self.frame_2.pack(fill=tk.X)
+
+            self.caixa_link = tk.Label(self.frame_1, text='Cole o link abaixo')
+            self.caixa_link.pack(anchor='center')
+
             # Entrada de dados
             self.entrada_link = tk.Entry(self.frame_1, width=100, font=self.fonte_Padrao)
-            self.entrada_link.pack(side='left')  # fill faz ajustar conforme mexe na janela
+            self.entrada_link.pack(anchor='center')  # fill faz ajustar conforme mexe na janela
+
             # Botão adicionar
-            self.botao_add = tk.Button(self.frame_1, text='Adicionar', command=self.link_add)
-            self.botao_add.pack(side='right')
+            self.botao_add = tk.Button(self.frame_2, text='Adicionar', command=self.link_add, pady=10)
+            self.botao_add.pack(side='left')
+
             # Botão sair
-            self.botao_limpar = tk.Button(self.frame_1, text='Sair', command=self.janela_principal.destroy)
-            self.botao_limpar.pack(anchor='w')
+            self.botao_limpar = tk.Button(self.frame_2, text='Sair', command=self.janela_principal.destroy)
+            self.botao_limpar.pack(side='left')
             tk.mainloop()
 
         # Função para adicionar o link
