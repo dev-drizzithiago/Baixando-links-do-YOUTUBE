@@ -25,13 +25,13 @@ def janela_link(msg_arq_link):
                                                                'YouTube', font=self.fonte_Padrao)
             self.titulo.pack(side='top')
             # Frame 1
-            self.frame_1 = tk.Frame(self.janela_principal, height=50, width=700)
+            self.frame_1 = tk.Frame(self.janela_principal, height=50, width=700, padx=10, pady=10)
             self.frame_1.pack(fill=tk.X)
 
-            self.frame_2 = tk.Frame(self.janela_principal)
+            self.frame_2 = tk.Frame(self.janela_principal, padx=10, pady=10)
             self.frame_2.pack(fill=tk.X)
 
-            self.caixa_link = tk.Label(self.frame_1, text='Cole o link abaixo')
+            self.caixa_link = tk.Label(self.frame_1, text='Cole no campo abaixo', pady=3)
             self.caixa_link.pack(anchor='center')
 
             # Entrada de dados
@@ -39,12 +39,12 @@ def janela_link(msg_arq_link):
             self.entrada_link.pack(anchor='center')  # fill faz ajustar conforme mexe na janela
 
             # Botão adicionar
-            self.botao_add = tk.Button(self.frame_2, text='Adicionar', command=self.link_add, pady=10)
-            self.botao_add.pack(side='left')
+            self.botao_add = tk.Button(self.frame_2, text='CLIQUE AQUI PARA ADICIONAR O LINK NA BASE DE DADOS', command=self.link_add, pady=10)
+            self.botao_add.pack(anchor='center')
 
             # Botão sair
             self.botao_limpar = tk.Button(self.frame_2, text='Sair', command=self.janela_principal.destroy)
-            self.botao_limpar.pack(side='left')
+            self.botao_limpar.pack(side='right')
             tk.mainloop()
 
         # Função para adicionar o link
@@ -79,14 +79,14 @@ def log_arquivo_ok(msg_ok):
     msg = f' ==> {data} - {msg_ok}'
     open_log = open(log(), 'a')
     open_log.write(f' Sem erro ==> {msg}\n\n')
-    print(msg_ok)
+    messagebox.showinfo(f'AVISO!!', f'{msg_ok}')
 
 
 def log_arquivo_erro(msg_log):
-    msg = f' ==> {data} - {msg_log}'
+    msg = f' ERRO ==> {data} - {msg_log}'
     open_log = open(log(), 'a')
     open_log.write(f' Com erro ==> {msg}\n\n')
-    print(msg)
+    messagebox.showwarning(f'AVISO!', f'{msg}')
 
 
 def pasta_audio():
