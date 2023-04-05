@@ -2,12 +2,12 @@ import datetime
 import tkinter as tk
 from time import sleep
 from tkinter import messagebox
-from datetime import time, date
+from datetime import datetime, date
 from lib_youtube.downloads import *
 from lib_youtube.checagem import *
 
 time_certo = datetime.now()
-data = time.strftime('%d-%m-%y - %H-%M')
+data = time_certo.strftime('%d-%m-%Y - %H-%M')
 
 
 
