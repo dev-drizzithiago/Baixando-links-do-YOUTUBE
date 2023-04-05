@@ -6,7 +6,9 @@ from datetime import time, date
 from lib_youtube.downloads import *
 from lib_youtube.checagem import *
 
-data = datetime.datetime.today()
+time_certo = datetime.now()
+data = time.strftime('%d-%m-%y - %H-%M')
+
 
 
 # Janelas adicionar links
@@ -75,14 +77,14 @@ def log():
 
 
 def log_arquivo_ok(msg_ok):
-    msg = f' ==> {data} - {msg_ok}'
+    msg = f' ==> {data} \n{msg_ok}'
     open_log = open(log(), 'a')
     open_log.write(f' Sem erro ==> {msg}\n')
     print(f'AVISO!!', f'{msg_ok}')
 
 
 def log_arquivo_erro(msg_log):
-    msg = f' ERRO ==> {data} - {msg_log}'
+    msg = f' ERRO ==> {data} \n{msg_log}'
     open_log = open(log(), 'a')
     open_log.write(f' Com erro ==> {msg}\n')
     messagebox.showwarning(f'AVISO!', f'{msg}')
