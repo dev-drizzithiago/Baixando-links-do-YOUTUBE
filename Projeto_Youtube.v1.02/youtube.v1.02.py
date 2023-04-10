@@ -49,7 +49,7 @@ class botao_radio:
         self.frame_2.pack(anchor='center')
 
         self.radio_valor = tk.IntVar()
-        self.radio_valor.set(0)
+        self.radio_valor.set(value=int)
         # Botão radio
         self.add_link = tk.Radiobutton(self.frame_1, text='==> Adicionar Link ', 
                                        variable=self.radio_valor, value=1)
